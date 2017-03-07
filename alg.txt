@@ -1,0 +1,12 @@
+https://en.wikipedia.org/wiki/Graph_traversal
+
+1 procedure DFS(G, v):
+2     label v as explored
+3     for all edges e in G.incidentEdges(v) do
+4         if edge e is unexplored then
+5             w ? G.adjacentVertex(v, e)
+6             if vertex w is unexplored then
+7                 label e as a discovered edge
+8                 recursively call DFS(G, w)
+9             else
+10               label e as a back edge
